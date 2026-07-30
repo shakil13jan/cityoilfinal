@@ -77,7 +77,7 @@ h1,h2,h3,h4{ font-family: var(--display); letter-spacing:.02em; margin:0 0 .3em;
 }
 .brand-logo .mark{
   width:42px; height:42px; border-radius:50%;
-  background: conic-gradient(from 220deg, var(--amber-deep), var(--amber), var(--amber-deep));
+  /* background: conic-gradient(from 220deg, var(--amber-deep), var(--amber), var(--amber-deep)); */
   display:flex; align-items:center; justify-content:center;
   font-family:var(--display); font-size:1.15rem; color:var(--ink);
   box-shadow:0 0 0 3px var(--panel), 0 0 18px var(--amber-glow);

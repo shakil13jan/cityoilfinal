@@ -33,7 +33,7 @@ const PRODUCT_DATA = {
           popular: true
         },
         {
-          name: "Amirath Dieselm Power",
+          name: "Amirath Diesel Power",
           spec: "15W-40 · 4L · Mineral · Heavy Duty",
           tag: "4L",
           image: "images/amirath/Diesel-Power-5L.png",
