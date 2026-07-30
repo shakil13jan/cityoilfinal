@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — City Oil Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand-logo">
+      <span class="mark">CO</span>
+      <span class="name">City Oil Agency<small>Lubricants Distributor</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="popular.html">Popular</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Contact City Oil Agency</h2>
+      <p>অর্ডার, ডিলারশিপ বা স্টক সংক্রান্ত যেকোনো তথ্যের জন্য যোগাযোগ করুন।</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:24px;">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <h3>Contact Details</h3>
+      <div class="contact-row"><span class="ico">MOBILE</span><span>+880 1716316726</span></div>
+      <div class="contact-row"><span class="ico">MAIL</span><span>marufcityoil@gmail.com</span></div>
+      <div class="contact-row"><span class="ico">LOCATIOM</span><span>15 No, Dayagank Municipal Market, Tikatuli, Dhaka-1100</span></div>
+      <div class="contact-row"><span class="ico">TIME</span><span>24/7 Available</span></div>
+    </div>
+
+    <form class="contact-form" onsubmit="return sendMail(event)">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="আপনার নাম" required>
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="আপনার ফোন নম্বর" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="আপনার প্রয়োজন লিখুন..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> City Oil Agency. All rights reserved.</span>
+      <span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+function sendMail(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+  const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\n${message}`);
+  window.location.href = `mailto:info@cityoilagency.com?subject=Website Inquiry&body=${body}`;
+  return false;
+}
+</script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
